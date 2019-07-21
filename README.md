@@ -1,6 +1,6 @@
-# My Blog
+# My Homepage
 
-Recording pieces of code and life. [http://longqian.me](http://longqian.me)
+ A window into my life - [https://piesauce.com](https://piesauce.com)
 
 ### Theme
 
