@@ -23,7 +23,7 @@ emailme:          mailto:contact@piesauce.com
 gems:             [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
 
 github:
-  repo:           https://github.com/qian256/qian256.github.io/
+  repo:           https://github.com/piesauce/piesauce.github.io
 
 tags:
 
