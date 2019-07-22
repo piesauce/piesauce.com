@@ -40,6 +40,12 @@
         <i class="fa fa-fw fa-facebook"></i>
       </a>
       {% endif %}
+	  {% if site.twitter_username %}
+      <a href="https://www.twitter.com/{{ site.twitter_username }}" target="_blank" style="text-decoration:none">
+        <i class="fa fa-fw fa-twitter"></i>
+      </a>
+      {% endif %}
+	  
       {% if site.linkedin_username %}
       <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" style="text-decoration:none">
         <i class="fa fa-fw fa-linkedin"></i>
