@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: android"
-tag: android
+title: "Tag: longform"
+tag: longform
 robots: noindex
 ---
