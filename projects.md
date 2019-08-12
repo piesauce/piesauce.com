@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+
 ---
 
 ## Research Topics
@@ -23,7 +23,7 @@ NLP systems are vulnerable from a security and privacy standpoint. Due to the la
 
 I am also interested in privacy-preserving NLP systems, specifically in terms of preventing demographic information leakage from hidden layer activations of neural networks.
 
-#### Publications
+## Publications
 
 1. Pai, S [”Automated Data Classification for mainframes”](https://research.tue.nl/en/studentTheses/automated-data-classification-for-mainframes), Master’s thesis, Eindhoven
 University of Technology, 2012
