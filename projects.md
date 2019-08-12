@@ -23,4 +23,11 @@ NLP systems are vulnerable from a security and privacy standpoint. Due to the la
 
 I am also interested in privacy-preserving NLP systems, specifically in terms of preventing demographic information leakage from hidden layer activations of neural networks.
 
+#### Publications
+
+1. Pai, S ”Automated Data Classification for mainframes”, Master’s thesis, Eindhoven
+University of Technology, 2012
+2. Pai, S ; Sharma, Y et al ”Formal Verification of OAuth 2.0 using the Alloy
+framework” In proc. of International Conference of Communications Systems and
+Network Technologies, Jammu, 2011
 
