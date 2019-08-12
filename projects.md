@@ -3,7 +3,7 @@ layout: page
 title: Projects
 ---
 
-#### Projects
+## Research Topics
 
 ### Neural Style Transfer for text.
 The meaning of a text is a composition of the content of the text and the style or tone in which it is written. Stylistic dimensions include formality, politeness, diplomacy, understandability, persuasiveness, etc. Style transfer for text is the task of taking a text expressed in a particular style and converting it into a text expressing a different style. 
@@ -25,7 +25,7 @@ I am also interested in privacy-preserving NLP systems, specifically in terms of
 
 #### Publications
 
-1. Pai, S ”Automated Data Classification for mainframes”, Master’s thesis, Eindhoven
+1. Pai, S [”Automated Data Classification for mainframes”](https://research.tue.nl/en/studentTheses/automated-data-classification-for-mainframes), Master’s thesis, Eindhoven
 University of Technology, 2012
 2. Pai, S ; Sharma, Y et al ”Formal Verification of OAuth 2.0 using the Alloy
 framework” In proc. of International Conference of Communications Systems and
