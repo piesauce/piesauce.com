@@ -1,10 +1,7 @@
 ---
 layout: page
-
+title: Projects
 ---
-
-## Research Topics
-
 ### Neural Style Transfer for text.
 The meaning of a text is a composition of the content of the text and the style or tone in which it is written. Stylistic dimensions include formality, politeness, diplomacy, understandability, persuasiveness, etc. Style transfer for text is the task of taking a text expressed in a particular style and converting it into a text expressing a different style. 
 
