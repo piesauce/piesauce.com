@@ -12,7 +12,7 @@ My focus is on unsupervised methods that can perform this task. Current techniqu
 I am also focused on developing reliable evaluation metrics that can measure the coherence, meaning preservation, and style transfer success of the generated text.
 
 ### Abusive Language Detection:
-Abusive language takes on several forms - hate speech, cyberbullying, trolling, grooming, etc. Detection of abusive language is treated as a text classification task, closely related to sentiment analysis. I am working on developing architectures that can facilitate robust models that are able to perform multi-level classification in the face of lexical alterations made to the text to evade abusive language filters. My current focus is on sub-word representations and transfer learning.
+Abusive language takes on several forms - hate speech, cyberbullying, trolling, grooming, etc. Detection of abusive language is treated as a text classification task, closely related to sentiment analysis. I am working on developing architectures that can facilitate fine-grained multi-level classification in the face of lexical alterations made to the text to evade abusive language filters. My current focus is on sub-word representations and transfer learning.
 
 
 ### Adversarial attacks on NLP systems
