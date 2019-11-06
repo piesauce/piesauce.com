@@ -4,7 +4,7 @@ title: Style Transfer for Text
 tags: nlp longform emnlp adversarial privacy 
 ---
 
-<div style="text-align: right"> 
+
 
 **Introduction**
 
@@ -291,4 +291,4 @@ If you would like to play around or conduct research on this task, here are some
 
 [Newsela dataset for text simplification](https://newsela.com/data/)
 
-</div>
+
