@@ -279,7 +279,7 @@ The explosive progress in NLP over the last two years can be attributed to pre-t
 
 Much of the pitfalls mentioned earlier still apply today. This field has seen many false dawns with adversarial methods, variational autoencoders being touted as game-changers but ultimately falling short. Future research will likely be focused on exploring more creative ways to leverage external large-scale data, be in the form of language models or in training set augmentation.
 
-**Datasets **
+**Datasets**
 
 If you would like to play around or conduct research on this task, here are some good datasets to get started with.
 
