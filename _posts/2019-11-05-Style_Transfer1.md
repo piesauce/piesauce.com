@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style Transfer for Text - Advances and Challenges
-tags: nlp longform emnlp adversarial privacy 
+tags: nlp longform emnlp 
 ---
 
 
