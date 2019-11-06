@@ -43,12 +43,7 @@ The source sentence is encoded using a bidirectional LSTM. The encoded represent
 
 The next token in the output is determined by a weighted addition of the probabilities from the RNN module and the pointer network module. The weights are based on the encoder output states and the previous decoder state. A conceptual diagram depicting this architecture is shown below:
 
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer1.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*3nE_Ui6luECL1NG8)
 
 
 Image Credits: Jhamtani et al, [Shakespearizing Modern Language Using Copy-Enriched Sequence-to-Sequence Models](https://arxiv.org/pdf/1707.01161.pdf)
@@ -69,12 +64,7 @@ Style-specific decoders are then used to generate text in the target style, taki
 
 A conceptual diagram of this model is shown below:
 
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer2.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer2.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*XTQu0es42BWTDgKM)
 
 
 Image taken from Fu et al, [Style Transfer in Text: Exploration and Evaluation](https://arxiv.org/pdf/1711.06861.pdf)
@@ -83,12 +73,7 @@ _Style embedding model_: Similar to the above method, this model uses a modified
 
 For the decoder model, the input is the encoded representation of the input text along with the style embedding vector representing the target style. The same decoder can be thus used to generate text in multiple styles.
 
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer3.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer3.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*jm7Iigl17AmMfW1n)
 
 
 Image taken from Fu et al, [Style Transfer in Text: Exploration and Evaluation](https://arxiv.org/pdf/1711.06861.pdf)
@@ -171,12 +156,7 @@ The _Matching_, _Translation_, and _Refinement_ steps are repeated for several i
 
 The paper contains a succinct description of the algorithm as shown in the figure below:
 
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer4.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer4.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*JyLgV9B_bKbio3sJ)
 
 
 The authors report that this model beats the state-of-the-art on the formality and sentiment transfer tasks, with improvements in fluency, content preservation, and transfer strength. The authors show that the iterative _Translation_ and _Refinement_ steps progressively create a better-aligned corpus, thereby enhancing content preservation abilities.
@@ -193,12 +173,7 @@ The model is made up of 2 components - an autoencoder to ensure content preserva
 
 The reconstruction loss of the autoencoder can be described by the loss function:
 
-
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer5.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer5.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*ctHtcjgifFZuMRIW)
 
 
 Where, 
@@ -214,35 +189,21 @@ To perform style transfer, the decoder replaces l<sub>i</sub>  with l<sub>i<sup>
 The output sentence x<sup>~<sub>i</sub></sup> is sampled from 
 
                       
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer6.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer6.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*1RjQ3Io5cntK_Og0)
 
 
 This formulation alone will not help in style transfer, as the decoder can simply copy the input sentence to minimize the reconstruction loss. Hence a style classifier is used to discriminate between sentences containing different styles. 
 
 The style classifier loss can be described by the loss function:
 
-
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer7.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer7.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*Gek9beiVKQtKztB7)
 
 
 Where C<sup>T </sup> is a style classifier that has been pre-trained on the target domain.
 
 With the assumption that out-of-domain data can be used by the model to model generic content and thus enhance content-preservation, both the source domain and target domain data are used to jointly train the autoencoder. The loss function of the autoencoder with respect to the source domain alone can be described by the following objective:
 
-
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer8.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer8.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*t9upAlP1ovSizgP0)
 
 
 Where l<sup>u <sub> </sub></sup> refers to an unknown or irrelevant style,
@@ -251,12 +212,7 @@ S refers to the source domain.
 
 The total loss is the sum of the autoencoder losses from the source and target domains as well as the style classifier loss.
 
-
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer9.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer9.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*-aKt16DiW7B6_M4i)
 
 
 L<sup>T<sub>style </sub></sup> ensures that generated content contains target domain-specific style characteristics since the style classifier is trained on the target domain only.
@@ -265,12 +221,7 @@ Meanwhile, L<sub>ae<sup>S </sup></sub> benefits from the massively large source 
 
 The architecture diagram is shown below:
 
-
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer10.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer10.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*CTom19rNq4iF3xUo)
 
 
 Image credit: Li et al. [Domain Adaptive Text Style Transfer](https://arxiv.org/pdf/1908.09395.pdf)
@@ -285,10 +236,7 @@ The autoencoding loss is now
 
 
 
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer11.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer11.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*utmYD6V0mHJzrZtj)
 
 
 where d<sup>S</sup> and d<sup>T</sup> are the source domain and target domain vectors respectively and l<sub>i</sub> = l<sub>i<sup>’</sup></sub>
@@ -297,10 +245,9 @@ The domain vectors bias the decoder towards generating sentences with domain-spe
 
 
 
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer12.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/Style-Transfer12.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*xsQnMOOEUCDWVzV0)
 
 
 Where C<sup>S </sup> and C<sup>T</sup> are style classifiers learned separately on the source and target styles respectively.
@@ -309,20 +256,17 @@ The overall loss is the sum of the autoencoder and the style classifier losses.
 
 
 
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer13.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/Style-Transfer13.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*Rm0Wcb0MxodXVwoD)
 
 
 The architecture diagram is shown below:
 
 
 
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer14.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-![alt_text](images/Style-Transfer14.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*zbaVcHnVFnVlh-zN)
 
 
 Image credit: Li et al. [Domain Adaptive Text Style Transfer](https://arxiv.org/pdf/1908.09395.pdf)
