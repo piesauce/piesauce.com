@@ -19,7 +19,7 @@ Style transfer using neural networks has seen considerable success in the comput
 
 The above image is a demonstration of image style transfer - the input image is rendered in the style of Monet, Van Gogh, Cezanne, and Ukiyo-e. 
 
-Image credits - Zhu et al, [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf).
+Image credits - Zhu et al., [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf).
 
 **Applications**
 
@@ -37,7 +37,7 @@ Word of caution - there seems to have been some concept creep in the literature.
 
 Textual style transfer can be seen as a machine translation task with highly overlapping source and target vocabularies. It can also be seen as a paraphrasing task where the paraphrasing is conditioned on the given attributes. Many style transfer models draw heavily from techniques used for solving these tasks.
 
-In one of the most seminal papers on supervised techniques in this field, [Harsh et al](https://arxiv.org/abs/1707.01161). describe a model to convert from a source style to a target style using a seq2seq model enriched by [pointer networks](https://arxiv.org/abs/1506.03134). The overall architecture is as follows:
+In one of the most seminal papers on supervised techniques in this field, [Harsh et al.](https://arxiv.org/abs/1707.01161). describe a model to convert from a source style to a target style using a seq2seq model enriched by [pointer networks](https://arxiv.org/abs/1506.03134). The overall architecture is as follows:
 
 The source sentence is encoded using a bidirectional LSTM. The encoded representation is then passed to a decoder which is comprised of two components - an RNN module and a pointer network module. The RNN predicts the probability distribution of the next word in the output over the target style vocabulary, while the pointer network predicts the probability distribution of the next word over the input sequence. The purpose of the pointer network is to enable direct copying of words from the input sequence to the output. This is especially useful for the task since we expect the vocabulary to be largely overlapping and that a non-trivial part of the sentence remains the same. The pointer network module is also helpful in predicting rare words and proper nouns which would otherwise have a hard time being predicted using the RNN module. 
 
@@ -46,13 +46,13 @@ The next token in the output is determined by a weighted addition of the probabi
 ![](https://cdn-images-1.medium.com/max/800/0*3nE_Ui6luECL1NG8)
 
 
-Image Credits: Jhamtani et al, [Shakespearizing Modern Language Using Copy-Enriched Sequence-to-Sequence Models](https://arxiv.org/pdf/1707.01161.pdf)
+Image Credits: Jhamtani et al., [Shakespearizing Modern Language Using Copy-Enriched Sequence-to-Sequence Models](https://arxiv.org/pdf/1707.01161.pdf)
 
 **Unsupervised Techniques**
 
 The difficulty in collecting and annotating parallel data has led to research being focused on unsupervised techniques that work on unpaired source and target style datasets.
 
-These techniques generally rely on disentangling the content and style of the text in latent space. [Fu et al](https://arxiv.org/pdf/1711.06861.pdf) propose two models that perform style transfer based on this separation. They demonstrate these models on two tasks - The Paper-News Title task which aims to re-write the title of a research paper in the form of a news article title, and the sentiment reversal task, which aims to translate a sentence from positive to negative sentiment. These models have formed the base framework for numerous subsequent research papers.
+These techniques generally rely on disentangling the content and style of the text in latent space. [Fu et al.](https://arxiv.org/pdf/1711.06861.pdf) propose two models that perform style transfer based on this separation. They demonstrate these models on two tasks - The Paper-News Title task which aims to re-write the title of a research paper in the form of a news article title, and the sentiment reversal task, which aims to translate a sentence from positive to negative sentiment. These models have formed the base framework for numerous subsequent research papers.
 
 _Multi-decoder model_: This model uses a modified autoencoder architecture. The autoencoder in its original formulation seeks to generate a compressed representation of an input x such that the representation can be used to regenerate the original sequence. 
 
@@ -67,7 +67,7 @@ A conceptual diagram of this model is shown below:
 ![](https://cdn-images-1.medium.com/max/800/0*XTQu0es42BWTDgKM)
 
 
-Image taken from Fu et al, [Style Transfer in Text: Exploration and Evaluation](https://arxiv.org/pdf/1711.06861.pdf)
+Image taken from Fu et al., [Style Transfer in Text: Exploration and Evaluation](https://arxiv.org/pdf/1711.06861.pdf)
 
 _Style embedding model_: Similar to the above method, this model uses a modified version of an autoencoder. In this model, each style is represented by a d-dimensional style embedding vector. The encoder and the adversarial network are the same as in the multi-decoder model. The embedding vectors for the styles are jointly trained with the network.
 
@@ -76,7 +76,7 @@ For the decoder model, the input is the encoded representation of the input text
 ![](https://cdn-images-1.medium.com/max/800/0*jm7Iigl17AmMfW1n)
 
 
-Image taken from Fu et al, [Style Transfer in Text: Exploration and Evaluation](https://arxiv.org/pdf/1711.06861.pdf)
+Image taken from Fu et al., [Style Transfer in Text: Exploration and Evaluation](https://arxiv.org/pdf/1711.06861.pdf)
 
 Other techniques like [variational autoencoders](https://arxiv.org/pdf/1808.04339.pdf) have also been extensively experimented with. 
 
@@ -110,9 +110,9 @@ Adversarial training is hard and needs a lot of data. The text generated through
 
 Progress made on this task can be potentially deceptive. Different style transfer tasks have varying degrees of difficulty. The most commonly experimented tasks in current research papers are the informal-formal conversion task and the sentiment reversal task. It should be noted that these tasks are also perhaps the easiest of the style transfer tasks, as the style is represented by surface-level lexical units rather than being an abstract emergent property, thus making content and style disentanglement easier.
 
-For example, [Rao et al](https://arxiv.org/pdf/1803.06535.pdf) show that an informal to formal sentence conversion for the most part consists of lexical changes like capitalizing the first letter of proper nouns, capitalizing the first letter of a sentence, expansion of contractions, and deletion of repetitive punctuation, all of which can be represented by a rule-based system that can provide a competitive baseline. 
+For example, [Rao et al.](https://arxiv.org/pdf/1803.06535.pdf) show that an informal to formal sentence conversion for the most part consists of lexical changes like capitalizing the first letter of proper nouns, capitalizing the first letter of a sentence, expansion of contractions, and deletion of repetitive punctuation, all of which can be represented by a rule-based system that can provide a competitive baseline. 
 
-Similarly, with the sentiment reversal task, certain words and phrases are heavily indicative of sentiment and thus can be separated from the non-sentiment bearing words with relative ease. [Li et al](https://arxiv.org/abs/1804.06437) introduced a Delete, Retrieve, Generate framework that exploits the heavily indicative style-bearing words and phrases for this task by using it as an inductive bias for their model. The Delete, Retrieve, Generate framework is truly simple and consists of the following sequence of steps:
+Similarly, with the sentiment reversal task, certain words and phrases are heavily indicative of sentiment and thus can be separated from the non-sentiment bearing words with relative ease. [Li et al.](https://arxiv.org/abs/1804.06437) introduced a Delete, Retrieve, Generate framework that exploits the heavily indicative style-bearing words and phrases for this task by using it as an inductive bias for their model. The Delete, Retrieve, Generate framework is truly simple and consists of the following sequence of steps:
 
 
 
@@ -132,9 +132,9 @@ Underpinning all technical pitfalls is the fundamental data scarcity problem. To
 
 **_Generating pseudo-parallel datasets_**
 
-[Jin et al](https://arxiv.org/pdf/1901.11333.pdf) devise an iterative algorithm to generate a pseudo-parallel dataset that aligns sentences from source and target style datasets. The iterative algorithm uses distance measures to guide the sentence alignments. Before we delve into the algorithm, let us take a quick look at the distance measures used:
+[Jin et al.](https://arxiv.org/pdf/1901.11333.pdf) devise an iterative algorithm to generate a pseudo-parallel dataset that aligns sentences from source and target style datasets. The iterative algorithm uses distance measures to guide the sentence alignments. Before we delve into the algorithm, let us take a quick look at the distance measures used:
 
-_Word Mover Distance_: Word Mover distance is a handy distance measure introduced by [Kusner et al](http://proceedings.mlr.press/v37/kusnerb15.pdf) which makes use of word embeddings for semantic similarity. Sentences are represented in vector space using a weighted combination of word embeddings representing the words in the sentence. WMD is based on the [Earth Mover distance](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/rubner-jcviu-00.pdf) and represents the minimum distance needed by words in sentence s<sub>1</sub> to ‘travel’ in order to reach the representation of sentence s<sub>2</sub>.
+_Word Mover Distance_: Word Mover distance is a handy distance measure introduced by [Kusner et al.](http://proceedings.mlr.press/v37/kusnerb15.pdf) which makes use of word embeddings for semantic similarity. Sentences are represented in vector space using a weighted combination of word embeddings representing the words in the sentence. WMD is based on the [Earth Mover distance](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/rubner-jcviu-00.pdf) and represents the minimum distance needed by words in sentence s<sub>1</sub> to ‘travel’ in order to reach the representation of sentence s<sub>2</sub>.
 
 The advantage of using WMD is that it does not require hyperparameters, as well as its high level of interpretability. The formulation of WMD accounts for sentences with unequal lengths, due to the usage of weighted embeddings where the weights sum to 1.
 
@@ -163,7 +163,7 @@ The authors report that this model beats the state-of-the-art on the formality a
 
 **_Leveraging out-of-domain data_**
 
-Can we utilize the large scale out-of-domain data to improve our results on the style transfer task? Yes, but we need to take into account the domain shift and implement measures to ensure that the generated text doesn’t exhibit spurious domain-specific characteristics. [Li et al](https://arxiv.org/pdf/1908.09395.pdf)  introduce two style transfer models that provide for domain adaptation - one in the case where the style labels are known for the out-of-domain data, and one where the style labels are unknown or are not relevant to the task.
+Can we utilize the large scale out-of-domain data to improve our results on the style transfer task? Yes, but we need to take into account the domain shift and implement measures to ensure that the generated text doesn’t exhibit spurious domain-specific characteristics. [Li et al.](https://arxiv.org/pdf/1908.09395.pdf)  introduce two style transfer models that provide for domain adaptation - one in the case where the style labels are known for the out-of-domain data, and one where the style labels are unknown or are not relevant to the task.
 
 For purposes of clarity, we will henceforth refer to the out-of-domain data as the _source domain _and the domain that we are performing style transfer in as the _target domain_. As an example, for the sentiment reversal task, we may aim to transfer from negative to positive sentiment on the Yelp food reviews dataset and would like to leverage IMDB reviews that exhibit a domain shift to improve our model. In this case, the _source domain_ is the movie reviews and the _target domain_ is the food reviews.
 
