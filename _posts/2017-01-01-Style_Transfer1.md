@@ -14,12 +14,7 @@ It would be quite unexpected if the rest of this article continued in the style 
 
 Style transfer using neural networks has seen considerable success in the computer vision domain. In this version of the task, a ‘content’ image is merged with a ‘style’ image to generate a new image that renders the content in the new style. Models based on [Generative Adversarial Networks](https://skymind.ai/wiki/generative-adversarial-network-gan) like [CoupledGAN](https://arxiv.org/pdf/1606.07536.pdf)’s and [CycleGAN ](https://arxiv.org/abs/1703.10593)have been extensively utilized for image style transfer, taking advantage of large amounts of non-parallel data. However, these techniques cannot be adapted easily to the textual domain due to the discrete nature of text. In this post, we will describe supervised and unsupervised techniques for textual style transfer along with their pitfalls as well as provide an insight into the state-of-the-art models that try to alleviate those pitfalls.
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Style-Transfer0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Style-Transfer0.png "image_tooltip")
+![](https://cdn-images-1.medium.com/max/800/0*G6mT1bJUEN_rdKuk)
 
 
 The above image is a demonstration of image style transfer - the input image is rendered in the style of Monet, Van Gogh, Cezanne, and Ukiyo-e. 
