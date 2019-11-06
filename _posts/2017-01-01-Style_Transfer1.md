@@ -146,11 +146,11 @@ Consider a corpus _X_ comprised of sentences _x<sub>1</sub>,x<sub>2</sub>,...x<s
 
 _Initialization:_ The pseudo-parallel corpus is initialized by pairing sentences from _X_ and _Y_ using distance measures. More specifically, for each sentence x<sub>1</sub> in _X_, the sentence from _Y_ that has the highest cosine semantic similarity score and exceeds a particular threshold γ is picked. Let the subset of X for which a pair exists be denoted by X<sup>~</sup>. Let the subset of Y which has been matched with the sentences in X be denoted by Y<sub>t</sub><sup>~</sup> where _t_ refers to the iteration number, which is 0 for the initialization phase. The remaining part of the algorithm is run for multiple iterations.
 
-_Matching_: For iteration > 0, X<sup>~</sup> is matched with Y<sub>t<sup>~</sup></sub> just like in the initialization phase. In this case, Y<sub>t<sup>~</sup></sub> is generated in the _Refinement_ step from the previous iteration. Let the output of the matching be denoted by _temp<sub>t</sub>_. Now, each sentence in X<sup>~</sup> has two candidate alignments - one in _temp<sub>t</sub>_ and one in Y<sub>t<sup>~</sup></sub>. The Word Mover distance between each sentence x<sub>i</sub> and the two candidate alignments are calculated. If the candidate from _temp<sub>t</sub>_ has a lower WMD score than the candidate from Y<sub>t<sup> ~</sup></sub> , then Y<sub>t<sup> ~ </sup> </sub>is updated with the candidate from _temp<sub>t</sub>_.
+_Matching_: For iteration > 0, X<sup>~</sup> is matched with Y<sub>t</sub><sup>~</sup> just like in the initialization phase. In this case, Y<sub>t</sub><sup>~</sup> is generated in the _Refinement_ step from the previous iteration. Let the output of the matching be denoted by _temp<sub>t</sub>_. Now, each sentence in X<sup>~</sup> has two candidate alignments - one in _temp<sub>t</sub>_ and one in Y<sub>t</sub><sup>~</sup>. The Word Mover distance between each sentence x<sub>i</sub> and the two candidate alignments are calculated. If the candidate from _temp<sub>t</sub>_ has a lower WMD score than the candidate from Y<sub>t</sub><sup>~</sup>, then Y<sub>t</sub><sup>~</sup> is updated with the candidate from _temp<sub>t</sub>_.
 
-_Translation_: During the translation step, a seq2seq machine translation model that uses attention is trained from scratch over the pseudo-parallel corpus (X<sup>~</sup>, Y<sub>t<sup>~</sup></sub>). Let this model be denoted by M<sub>t</sub>.
+_Translation_: During the translation step, a seq2seq machine translation model that uses attention is trained from scratch over the pseudo-parallel corpus (X<sup>~</sup>, Y<sub>t</sub><sup>~</sup>). Let this model be denoted by M<sub>t</sub>.
 
-_Refinement_: Each sentence in X<sup>~</sup> is fed as input to the machine translation model to generate a translation. Let the generated translations be denoted by_ temp<sub>t</sub>_. Now, each sentence in X<sup>~</sup> has two candidate alignments - one is the output of the machine translation model and one is the sentence matched during the _Initialization/Matching_ step. The Word Mover distance between each sentence x<sub>i</sub> and the two candidate alignments are calculated and the candidate with the smaller distance is inserted into Y<sub>t+1 </sub>, which is carried into the next iteration.
+_Refinement_: Each sentence in X<sup>~</sup> is fed as input to the machine translation model to generate a translation. Let the generated translations be denoted by _temp<sub>t</sub>_. Now, each sentence in X<sup>~</sup> has two candidate alignments - one is the output of the machine translation model and one is the sentence matched during the _Initialization/Matching_ step. The Word Mover distance between each sentence x<sub>i</sub> and the two candidate alignments are calculated and the candidate with the smaller distance is inserted into Y<sub>t+1</sub>, which is carried into the next iteration.
 
 The _Matching_, _Translation_, and _Refinement_ steps are repeated for several iterations to refine the pseudo-parallel corpus.
 
@@ -165,7 +165,7 @@ The authors report that this model beats the state-of-the-art on the formality a
 
 Can we utilize the large scale out-of-domain data to improve our results on the style transfer task? Yes, but we need to take into account the domain shift and implement measures to ensure that the generated text doesn’t exhibit spurious domain-specific characteristics. [Li et al.](https://arxiv.org/pdf/1908.09395.pdf)  introduce two style transfer models that provide for domain adaptation - one in the case where the style labels are known for the out-of-domain data, and one where the style labels are unknown or are not relevant to the task.
 
-For purposes of clarity, we will henceforth refer to the out-of-domain data as the _source domain _and the domain that we are performing style transfer in as the _target domain_. As an example, for the sentiment reversal task, we may aim to transfer from negative to positive sentiment on the Yelp food reviews dataset and would like to leverage IMDB reviews that exhibit a domain shift to improve our model. In this case, the _source domain_ is the movie reviews and the _target domain_ is the food reviews.
+For purposes of clarity, we will henceforth refer to the out-of-domain data as the _source domain_ and the domain that we are performing style transfer in as the _target domain_. As an example, for the sentiment reversal task, we may aim to transfer from negative to positive sentiment on the Yelp food reviews dataset and would like to leverage IMDB reviews that exhibit a domain shift to improve our model. In this case, the _source domain_ is the movie reviews and the _target domain_ is the food reviews.
 
 **Domain adaptive style transfer using source domain data having unknown styles (DAST-C):**
 
@@ -178,15 +178,15 @@ The reconstruction loss of the autoencoder can be described by the loss function
 
 Where, 
 
-c<sub>i</sub> refers to the compressed representation of a sentence x<sub>i </sub>when run through the Encoder.
+c<sub>i</sub> refers to the compressed representation of a sentence x<sub>i</sub> when run through the Encoder.
 
 l<sub>i</sub>  refers to the source style.
 
 T refers to the target domain.
 
-To perform style transfer, the decoder replaces l<sub>i</sub>  with l<sub>i<sup>~ </sup></sub>. 
+To perform style transfer, the decoder replaces l<sub>i</sub>  with l<sub>i</sub><sup>~</sup>. 
 
-The output sentence x<sup>~<sub>i</sub></sup> is sampled from 
+The output sentence x<sup>~</sup><sub>i</sub> is sampled from 
 
                       
 ![](https://cdn-images-1.medium.com/max/800/0*1RjQ3Io5cntK_Og0)
@@ -199,14 +199,14 @@ The style classifier loss can be described by the loss function:
 ![](https://cdn-images-1.medium.com/max/800/0*Gek9beiVKQtKztB7)
 
 
-Where C<sup>T </sup> is a style classifier that has been pre-trained on the target domain.
+Where C<sup>T</sup> is a style classifier that has been pre-trained on the target domain.
 
 With the assumption that out-of-domain data can be used by the model to model generic content and thus enhance content-preservation, both the source domain and target domain data are used to jointly train the autoencoder. The loss function of the autoencoder with respect to the source domain alone can be described by the following objective:
 
 ![](https://cdn-images-1.medium.com/max/800/0*t9upAlP1ovSizgP0)
 
 
-Where l<sup>u <sub> </sub></sup> refers to an unknown or irrelevant style,
+Where l<sup>u</sup> refers to an unknown or irrelevant style,
 
 S refers to the source domain.
 
@@ -215,9 +215,9 @@ The total loss is the sum of the autoencoder losses from the source and target d
 ![](https://cdn-images-1.medium.com/max/800/0*-aKt16DiW7B6_M4i)
 
 
-L<sup>T<sub>style </sub></sup> ensures that generated content contains target domain-specific style characteristics since the style classifier is trained on the target domain only.
+L<sup>T</sup><sub>style</sub> ensures that generated content contains target domain-specific style characteristics since the style classifier is trained on the target domain only.
 
-Meanwhile, L<sub>ae<sup>S </sup></sub> benefits from the massively large source domain data to ensure better modeling of content representation, thus boosting content preservation.
+Meanwhile, L<sub>ae</sub><sup>S</sup> benefits from the massively large source domain data to ensure better modeling of content representation, thus boosting content preservation.
 
 The architecture diagram is shown below:
 
@@ -239,7 +239,7 @@ The autoencoding loss is now
 ![](https://cdn-images-1.medium.com/max/800/0*utmYD6V0mHJzrZtj)
 
 
-where d<sup>S</sup> and d<sup>T</sup> are the source domain and target domain vectors respectively and l<sub>i</sub> = l<sub>i<sup>’</sup></sub>
+where d<sup>S</sup> and d<sup>T</sup> are the source domain and target domain vectors respectively and l<sub>i</sub> = l<sub>i</sub><sup>’</sup>
 
 The domain vectors bias the decoder towards generating sentences with domain-specific characteristics. This idea is also extended to the style classifiers, thus resulting in style-specific classifiers being learned.
 
@@ -250,7 +250,7 @@ The domain vectors bias the decoder towards generating sentences with domain-spe
 ![](https://cdn-images-1.medium.com/max/800/0*xsQnMOOEUCDWVzV0)
 
 
-Where C<sup>S </sup> and C<sup>T</sup> are style classifiers learned separately on the source and target styles respectively.
+Where C<sup>S</sup> and C<sup>T</sup> are style classifiers learned separately on the source and target styles respectively.
 
 The overall loss is the sum of the autoencoder and the style classifier losses.
 
