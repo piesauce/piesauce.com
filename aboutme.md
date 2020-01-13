@@ -22,7 +22,6 @@ I was born and spent most of my childhood in the southern part of Coastal Karnat
 
 I currently live in Toronto, which I think is the greatest city in the world. I previously lived in Amsterdam, which I thought back then was the greatest city in the world. Before that, I lived in Delft, NL, which I also thought was the greatest city in the world. Yes, I am a hopeless romantic when it comes to cities. 
 
-I am currently writing a book about my urban experience. The book is part-travelogue, part-autobiography, part-data based urban policy prescriptions, part-cultural critique. I hope to finish it by the end of this year and therefore have publicly posted this on my website to remind myself! 
 
 
 ### Hobbies.
