@@ -22,7 +22,7 @@ I was born and spent most of my childhood in the southern part of Coastal Karnat
 
 I currently live in Toronto, which I think is the greatest city in the world. I previously lived in Amsterdam, which I thought back then was the greatest city in the world. Before that, I lived in Delft, NL, which I also thought was the greatest city in the world. Yes, I am a hopeless romantic when it comes to cities. 
 
-### ML community involvement 
+### ML Community Involvement 
 
 *Steering Committee Member - NLP stream owner at Aggregate Intellect, Toronto (Jan 2020 -)*
 
