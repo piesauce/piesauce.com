@@ -43,7 +43,7 @@ Activities include writing NLP blog posts, facilitating discussion sessions on N
 
 
 
-### Hobbies.
+### Hobbies
 In due course, I will fill this site up with more content about my hobbies. 
 I love to read, walk, eat, and write, not necessarily in that order. I nerd out on public transit, aviation, board games, and election predictions. I am passionate about immigration and public transportation advocacy. 
 
