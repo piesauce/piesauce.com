@@ -26,7 +26,7 @@ I currently live in Toronto, which I think is the greatest city in the world. I 
 
 *Steering Committee Member - NLP stream owner at Aggregate Intellect, Toronto (Jan 2020-)*
 
-Activities include writing NLP blog posts, facilitating discussion sessions on NLP research papers, giving presentations on new papers (More to come!)
+* Activities include writing NLP blog posts, facilitating discussion sessions on NLP research papers, giving presentations on new papers (More to come!)
 
 ### Speaking Engagements
 
