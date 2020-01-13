@@ -22,6 +22,19 @@ I was born and spent most of my childhood in the southern part of Coastal Karnat
 
 I currently live in Toronto, which I think is the greatest city in the world. I previously lived in Amsterdam, which I thought back then was the greatest city in the world. Before that, I lived in Delft, NL, which I also thought was the greatest city in the world. Yes, I am a hopeless romantic when it comes to cities. 
 
+### Speaking Engagements
+
+*Upcoming*
+
+* Tutorial on Privacy-preserving Machine Learning - with a special focus on NLP (Feb 2020)
+* Tutorial on using SpaCy to build efficient NLP pipelines (Feb 2020)
+
+*Previous (Recent)*
+
+* Facilitator at a paper discussion session on the paper 'Hierarchical Transformers for Long Document Classification' held at Ada Support, Toronto, on December 2, 2019
+
+* Presenter at the AISC Abstract Night held at Flybits, Toronto, on September 30, 2019. Gave short presentations on papers about style transfer for text and text summarization.
+
 
 
 ### Hobbies.
