@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Politics
+title: Politics + NLP
 ---
 
 Coming soon!
