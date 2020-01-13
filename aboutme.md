@@ -11,9 +11,9 @@ title: About Me
 Hello!
 I am Suhas Pai, oft referred to on the internets by my online moniker ‘piesauce’.
 
-I am passionate about harnessing natural language processing technologies to help people understand each other better, as well as researching new techniques to facilitate it. My key NLP research interests lie in representation learning, language modeling, and natural language understanding. More information about my work in NLP can be found on my [Projects](https://www.piesauce.com/projects/) page. 
+I am passionate about harnessing natural language processing technologies to help people understand each other better, as well as researching new techniques to facilitate it. My key research interests lie in privacy-preserving NLP, controlled text generation, and natural language understanding. More information about my work in NLP can be found on my [Projects](https://www.piesauce.com/projects/) page. 
 
-I am also fascinated by machine learning in general and am particularly interested in understanding and developing neural network architectures that embody effective inductive biases. I also possess a keen interest in the ethical aspects of developing and deploying AI systems, like privacy, interpretability, and prejudice.
+I am also fascinated by machine learning in general and am particularly interested in understanding and developing neural network architectures that embody effective inductive biases. I also possess a keen interest in the ethical aspects of developing and deploying AI systems, like privacy, interpretability, and bias.
 
 
 ### Personal History 
