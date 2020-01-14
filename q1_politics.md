@@ -63,13 +63,13 @@ MP Embeddings
 
 In a similar vein, we learn MP embeddings for each individual MP based on their previous voting record and the text of the bills they voted for. Once we obtain the embeddings, we try to answer questions such as the following:
 
-Who are the habitual aisle crossers? 
+* Who are the habitual aisle crossers? 
 
-Do we observe local clusters within a party cluster representing different factions within a party?
+* Do we observe local clusters within a party cluster representing different factions within a party?
 
-For a particular MP, which other MPs are its nearest neighbors in terms of voting records?
+* For a particular MP, which other MPs are its nearest neighbors in terms of voting records?
 
-How deviant is a particular MP from the party voting average?
+* How deviant is a particular MP from the party voting average?
 
 ## Bill Embeddings
 
@@ -83,11 +83,11 @@ Now that we have all these representations, can we use them for prediction?
 We can certainly try.
 We perform the following predictions:
 
-Predict if a bill introduced into parliament will become a law or not, based on the past voting behavior of the House’s members.
+* Predict if a bill introduced into parliament will become a law or not, based on the past voting behavior of the House’s members.
 
-Predict the number of days/months it would take for a particular bill to become law based on past trends.
+* Predict the number of days/months it would take for a particular bill to become law based on past trends.
 
-Predict the number of minutes for which a particular bill will be discussed in Parliament based on its initial text.
+* Predict the number of minutes for which a particular bill will be discussed in Parliament based on its initial text.
 
 We will test our predictions using bills from the new Parliament. However, we are limited in some aspects - we do not have past voting behavior of new members. 91/338 members are newcomers to Parliament.
 
