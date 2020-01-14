@@ -1,9 +1,15 @@
 ---
 layout: page
-title: The Political Embeddings Project
+title: Politics + NLP
 ---
 
-# Part 1 - Introduction
+# The Political Embeddings Project
+
+*This is a 10 part blog post series on using natural language processing techniques to understand better and gain insights into the Canadian political system.*
+
+##Part 1 - Introduction
+
+
 
 Citizens are constantly reminded of their civic duty to participate in democracy by being politically informed and casting their vote responsibly. However, even the most seasoned political aficionado would find it hard to keep track of all political developments, policy proposals, and electoral candidates. Politics is simply...complex.
 
