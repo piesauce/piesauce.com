@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Politics + NLP
+title: The Political Embeddings Project
 ---
 
-#### The Political Embeddings project - Part 1
+#### Part 1 - Introduction
 
 Citizens are constantly reminded of their civic duty to participate in democracy by being politically informed and casting their vote responsibly. However, even the most seasoned political aficionado would find it hard to keep track of all political developments, policy proposals, and electoral candidates. Politics is simply...complex.
 
