@@ -7,7 +7,7 @@ title: Politics + NLP
 
 *This is a 10 part blog post series on using natural language processing techniques to understand better and gain insights into the Canadian political system.*
 
-##Part 1 - Introduction
+## Part 1 - Introduction
 
 
 
