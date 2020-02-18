@@ -55,7 +55,9 @@ Of course, every bill does not represent the same amount of ideological signific
 Once we have learned the vectors, we visualize them in 2D/3D space using dimensionality reduction techniques. From the data and visualizations, we aim to answer the following questions:
 
 - It is often alleged that the Liberals ‘campaign from the left, but govern from the right’. Does the data support it?
+
 - How similar are the Green Party and the NDP from each other?
+
 - Which party is the Bloc closest to, based on their voting record?
 
 A yes/no signal sometimes doesn’t take into account the complex nuances behind the vote. For example, MPs of a party may vote against a bill not because they disagree with its contents, but because they feel it does too little. We experiment with different techniques to try to deal with these nuances wherever possible.
