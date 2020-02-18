@@ -50,26 +50,27 @@ Now that we have introduced the Canadian parliamentary system, we proceed to giv
 
 We learn a vector for each party based on the voting history of its members and the text of the bills that they voted ‘Yes’ for. Using vector space distance measures, we try to understand the ideological distances between parties based on their voting records. 
 
-Of course, every bill does not represent the same amount of ideological significance. A bill about making a particular day of the year National Autism Awareness day contains much less information ideologically than a comprehensive bill about environmental regulations across multiple sectors. We experiment with different weighting schemes of bills to take into account the relevant ideological importance of these. 
+Of course, every bill does not represent the same amount of ideological significance. A bill about making a particular day of the year National Autism Awareness day is much less ideologically informative than a comprehensive bill about environmental regulations across multiple sectors. We experiment with different weighting schemes of bills to take into account the relevant ideological importance of these. 
 
-Once we have learned the vectors, we visualize them in 2D/3D space using dimensionality reduction techniques. More specifically, we aim to answer the following questions:
+Once we have learned the vectors, we visualize them in 2D/3D space using dimensionality reduction techniques. From the data and visualizations, we aim to answer the following questions:
 
-It is often alleged that the Liberals ‘campaign from the left, but govern from the right’. Does the data support it?
-How similar are the Green Party and the NDP from each other?
-Which party is the Bloc closest to, ideologically?
+- It is often alleged that the Liberals ‘campaign from the left, but govern from the right’. Does the data support it?
+- How similar are the Green Party and the NDP from each other?
+- Which party is the Bloc closest to, based on their voting record?
 
 A yes/no signal sometimes doesn’t take into account the complex nuances behind the vote. For example, MPs of a party may vote against a bill not because they disagree with its contents, but because they feel it does too little. We experiment with different techniques to try to deal with these nuances wherever possible.
-MP Embeddings
 
-In a similar vein, we learn MP embeddings for each individual MP based on their previous voting record and the text of the bills they voted for. Once we obtain the embeddings, we try to answer questions such as the following:
+## M.P Embeddings
+
+In a similar vein, we learn M.P embeddings for each individual MP based on their previous voting record and the text of the bills they voted for. Once we obtain the embeddings, we try to answer questions such as the following:
 
 * Who are the habitual aisle crossers? 
 
 * Do we observe local clusters within a party cluster representing different factions within a party?
 
-* For a particular MP, which other MPs are its nearest neighbors in terms of voting records?
+* For a particular M.P, which other M.Ps are its nearest neighbors in terms of voting records?
 
-* How deviant is a particular MP from the party voting average?
+* How deviant is a particular M.P from the party voting average?
 
 ## Bill Embeddings
 
