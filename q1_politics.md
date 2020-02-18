@@ -5,7 +5,7 @@ title: Politics + NLP
 
 # The Political Embeddings Project
 
-*This is a 10 part blog post series on using natural language processing techniques to understand better and gain insights into the Canadian political system.*
+*This is a 10 part blog post series on using natural language processing techniques to better understand and gain insights into the Canadian political system.*
 
 ## Part 1 - Introduction
 
@@ -13,7 +13,7 @@ title: Politics + NLP
 
 Citizens are constantly reminded of their civic duty to participate in democracy by being politically informed and casting their vote responsibly. However, even the most seasoned political aficionado would find it hard to keep track of all political developments, policy proposals, and electoral candidates. Politics is simply...complex.
 
-Politics, as presented in the media to the general public, is extremely simplified. Complex multi-dimensional ideological positions are compressed into a two-dimensional left-right spectrum. Voters are forced to identify themselves within this narrow spectrum even while they reconcile with holding seemingly contradictory positions due to the lack of representational space in the traditional left-right spectrum. 
+Politics, as presented in the media to the general public, is extremely simplified. Complex multi-dimensional ideological positions are compressed into a constricting left-right spectrum. Voters are forced to identify themselves within this narrow spectrum even while they reconcile with holding seemingly contradictory positions due to the lack of representational capacity in this unidimensional space.
 
 Can we do better? Can we use natural language processing and machine learning techniques to give citizens better insight into the political process? In this upcoming series of blog posts, we will aim to do exactly that.
 
@@ -24,19 +24,19 @@ We will start with a short primer on the Canadian parliamentary system for those
 ## The Canadian Parliament
 The Parliament has two houses - The House of Commons and the Senate. The House of Commons is the more powerful house of the two.
 
-The House of Commons has 338 members called MPs(Member of Parliament), voted in directly by the Canadian population across the ten provinces and territories. Each Member of Parliament represents an electoral district (‘riding’ in Canadian parlance), with each riding containing an average of 75,000 voters(as of 2015). Elections are held once every four years unless the ruling party or coalition loses ‘confidence’ of the parliament. To maintain confidence, 170 votes are required (50% + 1 votes).
+The House of Commons has 338 members called MPs (Member of Parliament), voted in directly by the Canadian population across the ten provinces and three territories. Each Member of Parliament represents an electoral district (‘riding’ in Canadian parlance), with each riding containing an average of 75,000 voters (as of 2015). Elections are held once every four years unless the ruling party or coalition loses ‘confidence’ of the parliament. To maintain confidence, 170 votes are required (50% + 1 votes).
 
 The Senate is comprised of 105 members and its members are appointed on the advice of the Prime Minister. Senators usually keep their seats until the age of 75 unless they choose to resign or are removed.
 
 ## The Party System
 
-Canada has a multi-party system and there are currently 5 parties represented in the House of Commons. The parties and their ideological positions according to Wikipedia are as follows:
+Canada has a multi-party system and there are currently 5 parties represented in the House of Commons. The parties and their ideological positions (according to Wikipedia) are as follows:
 
-Liberal Party of Canada (Centre to Centre-Left)
-Conservative Party of Canada (Centre-Right to Right-wing)
-New Democratic Party (Centre-Left to Left-wing)
-Bloc Quebecois (Centre-Left)
-Green Party of Canada (Centre-Left?)
+- Liberal Party of Canada (Centre to Centre-Left)
+- Conservative Party of Canada (Centre-Right to Right-wing)
+- New Democratic Party (Centre-Left to Left-wing)
+- Bloc Quebecois (Centre-Left)
+- Green Party of Canada (Centre-Left?)
 
 ## Bills
 A bill is a proposed law that is introduced into the Canadian Parliament by a member of the HoC or the Senate. Bills can be ‘public’ or ‘private’. Government bills are usually introduced by a member of the ruling Cabinet from the HoC. Private Member’s bills can be introduced by either MPs or Senators, regardless of political affiliation.
